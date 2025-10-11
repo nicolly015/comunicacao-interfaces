@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Comunicação</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-nav">
+            <div class="logo"><i class="fas fa-bars menu-toggle"></i>W</div>
+            <nav class="sidebar-nav">
+                <a href="index.html" title="Dashboard"><i class="fas fa-home"></i></a>
+                <a href="comunicacao.html" title="Comunicação"><i class="fas fa-comment-dots"></i></a>
+                <a href="#" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+            </nav>
+        </header>
+        <div class="top-nav-second">
+            <div class="breadcrumbs">
+                <a href="index.html"><i class="fas fa-home icon-sm"></i> Início</a> / Comunicação
+            </div>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Nome da pessoa</span>
+            </div>
+        </div>
+        <main class="main-content">
+            <nav class="sub-nav">
+                <a href="comunicacao.html" class="active">Memorandos</a>
+                <a href="mural_tarefas.html">Mural de Tarefas</a>
+            </nav>
+
+            <div class="content-header">
+                <h2>Caixa de Entrada</h2>
+                <div class="actions">
+                    <a href="despachados.html" class="btn-secondary">Despachados</a>
+                    <a href="novo_memorando.html" class="btn-primary"><i class="fas fa-plus"></i> Novo Memorando</a>
+                </div>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Remetente</th>
+                        <th>Assunto/Título</th>
+                        <th>Data de Recebimento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Setor de TI</td>
+                        <td>Atualização do Sistema WeGIA</td>
+                        <td>07/10/2025</td>
+                        <td>
+                            <a href="visualizar_memorando_ti.html" class="btn-action" title="Visualizar"><i
+                                    class="fas fa-eye"></i></a>
+                            <a href="despachar_memorando.html" class="btn-action" title="Encaminhar"><i
+                                    class="fas fa-share"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Recursos Humanos</td>
+                        <td>Política de Férias 2026</td>
+                        <td>06/10/2025</td>
+                        <td>
+                            <a href="visualizar_memorando_rh.html" class="btn-action" title="Visualizar"><i
+                                    class="fas fa-eye"></i></a>
+                            <a href="despachar_memorando.html" class="btn-action" title="Encaminhar"><i
+                                    class="fas fa-share"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
