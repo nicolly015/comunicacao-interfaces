@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Tarefas - WeGIA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-nav">
+            <div class="logo"><i class="fas fa-bars menu-toggle"></i>W</div>
+            <nav class="sidebar-nav">
+                <a href="index.html" title="Dashboard"><i class="fas fa-home"></i></a>
+                <a href="comunicacao.html" title="Comunicação"><i class="fas fa-comment-dots"></i></a>
+                <a href="#" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+            </nav>
+        </header>
+        <div class="top-nav-second">
+            <div class="breadcrumbs">
+                <a href="index.html"><i class="fas fa-home icon-sm"></i> Início</a> / <a
+                    href="comunicacao.html">Comunicação</a> / <span>Mural de Tarefas</span>
+            </div>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Nome da pessoa</span>
+            </div>
+        </div>
+
+        <main class="main-content">
+
+            <nav class="sub-nav">
+                <a href="comunicacao.html">Memorandos</a>
+                <a href="mural_tarefas.html" class="active">Mural de Tarefas</a>
+            </nav>
+
+            <div class="content-header">
+                <h2>Mural Geral de Tarefas</h2>
+                <div class="actions">
+                    <a href="minhas_tarefas.html" class="btn-secondary">Minhas Tarefas</a>
+                    <button id="open-new-task-modal" class="btn-primary"><i class="fas fa-plus"></i> Nova
+                        Tarefa</button>
+                </div>
+            </div>
+
+            <div class="kanban-board">
+                <div class="kanban-column">
+                    <h3>Pendente</h3>
+                    <div class="task-card">
+                        <h4>Elaborar relatório de custos</h4>
+                        <div class="task-footer">Responsável: Ana | Prazo: 15/10/2025</div>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <h3>Em Andamento</h3>
+                    <div class="task-card">
+                        <h4>Revisar documentação do Módulo RH</h4>
+                        <div class="task-footer">Responsável: João | Prazo: 10/10/2025</div>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <h3>Concluída</h3>
+                    <div class="task-card">
+                        <h4>Ajustar layout da tela inicial</h4>
+                        <div class="task-footer">Responsável: Carlos | Concluído: 06/10/2025</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="new-task-modal" class="modal-overlay">
+        <div class="content-panel modal-content">
+            <div class="content-header">
+                <h2><i class="fas fa-plus-circle"></i> Criar Nova Tarefa</h2>
+                <button class="btn-action close-modal-btn"><i class="fas fa-times fa-lg"></i></button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="task-title">Título da Tarefa</label>
+                    <input type="text" id="task-title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-responsible">Designar Responsável</label>
+                    <select id="task-responsible" class="form-control" required>
+                        <option value="">Selecione...</option>
+                        <option value="ana">Ana</option>
+                        <option value="carlos">Carlos</option>
+                        <option value="joao">João</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="task-deadline">Data Limite</label>
+                    <input type="date" id="task-deadline" class="form-control" required>
+                </div>
+                <div class="actions" style="justify-content: flex-end; margin-top: 20px;">
+                    <button type="button" class="btn-secondary close-modal-btn">Cancelar</button>
+                    <button type="submit" class="btn-primary">Criar Tarefa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
