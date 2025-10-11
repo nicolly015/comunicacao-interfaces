@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas - WeGIA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-nav">
+            <div class="logo"><i class="fas fa-bars menu-toggle"></i>W</div>
+            <nav class="sidebar-nav">
+                <a href="index.html" title="Dashboard"><i class="fas fa-home"></i></a>
+                <a href="comunicacao.html" title="Comunicação"><i class="fas fa-comment-dots"></i></a>
+                <a href="#" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+            </nav>
+        </header>
+        <div class="top-nav-second">
+            <div class="breadcrumbs">
+                <a href="index.html"><i class="fas fa-home icon-sm"></i> Início</a> / <a
+                    href="comunicacao.html">Comunicação</a> / <span>Minhas Tarefas</span>
+            </div>
+            <div class="user-info">
+                <span>Carlos</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+        <main class="main-content">
+
+            <nav class="sub-nav">
+                <a href="comunicacao.html">Memorandos</a>
+                <a href="mural_tarefas.html" class="active">Mural de Tarefas</a>
+            </nav>
+
+            <div class="content-header">
+                <h1>Minhas Tarefas</h1>
+                <div class="actions">
+                    <a href="mural_tarefas.html" class="btn-secondary">
+                        <i class="fas fa-users"></i> Ver Mural Geral
+                    </a>
+                </div>
+            </div>
+
+            <div class="kanban-board">
+                <div class="kanban-column">
+                    <h3>Pendente</h3>
+                </div>
+
+                <div class="kanban-column">
+                    <h3>Em Andamento</h3>
+                    <div class="task-card">
+                        <h4>Ajustar layout da tela inicial</h4>
+                        <div class="task-meta">
+                            <span>Prazo: 12/10/2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kanban-column">
+                    <h3>Concluída</h3>
+                    <div class="task-card">
+                        <h4>Implementar funcionalidade de logout</h4>
+                        <div class="task-meta">
+                            <span class="meta-done">Concluído: 06/10/2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
