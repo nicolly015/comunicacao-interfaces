@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Memorando</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-nav">
+            <div class="logo"><i class="fas fa-bars menu-toggle"></i>W</div>
+            <nav class="sidebar-nav">
+                <a href="index.html" title="Dashboard"><i class="fas fa-home"></i></a>
+                <a href="comunicacao.html" title="Comunicação"><i class="fas fa-comment-dots"></i></a>
+                <a href="#" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+            </nav>
+        </header>
+        <div class="top-nav-second">
+            <div class="breadcrumbs">
+                <a href="index.html"><i class="fas fa-home icon-sm"></i> Início</a> / <a
+                    href="comunicacao.html">Comunicação</a> / Novo Memorando
+            </div>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i><span>Nome da pessoa</span>
+            </div>
+        </div>
+        <main class="main-content">
+
+            <div class="content-panel">
+                <h2><i class="fas fa-file-alt"></i> Novo Memorando</h2>
+                <form action="despachar_memorando.html">
+                    <div class="form-group">
+                        <label for="titulo">Título do Memorando</label>
+                        <input type="text" id="titulo" class="form-control"
+                            placeholder="Digite o título principal do documento..." required>
+                    </div>
+                    <button type="submit" class="btn-primary"><i class="fas fa-arrow-right"></i> Criar e ir para
+                        Despacho</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
