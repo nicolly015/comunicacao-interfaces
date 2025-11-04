@@ -18,11 +18,12 @@
             <nav class="sidebar-nav">
                 <a href="index.html" title="Dashboard"><i class="fas fa-home"></i></a>
                 <a href="comunicacao.html" title="Comunicação"><i class="fas fa-comment-dots"></i></a>
-                <a href="#" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+                <a href="chat.html" title="Chat"><i class="fas fa-comments"></i></a>
+                <a href="agenda.html" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
             </nav>
             <div class="user-info">
                 <i class="fas fa-user-circle"></i>
-                <span>Nome da pessoa</span>
+                <span>Carlos</span> 
             </div>
         </header>
         <div class="breadcrumbs">
@@ -50,8 +51,134 @@
                     <p>Configurações</p>
                 </a>
             </section>
+
+            <div class="content-header" style="margin-top: 40px;">
+                <h2>Mural de Tarefas</h2>
+                <div class="actions">
+                    <button id="btn-filter-all" class="btn-secondary active">Mural Geral</button>
+                    <button id="btn-filter-mine" class="btn-secondary">Minhas Tarefas</button>
+                </div>
+            </div>
+
+            <div class="kanban-board" data-current-user="Carlos">
+                <div class="kanban-column">
+                    <h3>Pendente</h3>
+                    <div class="task-card needs-action" draggable="true"
+                        data-title="Revisão do Orçamento Q4"
+                        data-description="Carlos, por favor, revise a planilha de orçamento do Q4 que o financeiro enviou."
+                        data-responsible="Carlos"
+                        data-deadline="20/10/2025">
+                    
+                        <h4>Revisão do Orçamento Q4</h4>
+                        <div class="task-footer">Designado para: Carlos | Prazo: 20/10/2025</div>
+                        
+                        <div class="task-acceptance-buttons">
+                            <button class="btn-accept"><i class="fas fa-check"></i> Aceitar</button>
+                            <button class="btn-decline"><i class="fas fa-times"></i> Recusar</button>
+                        </div>
+                    </div>
+                    <div class="task-card" draggable="true" 
+                        data-title="Elaborar relatório de custos"
+                        data-description="Descrição detalhada sobre o relatório de custos. Precisa incluir os gastos do Q3 e projeção para o Q4."
+                        data-responsible="Ana"
+                        data-deadline="15/10/2025">
+                        <h4>Elaborar relatório de custos</h4>
+                        <div class="task-footer">Responsável: Ana | Prazo: 15/10/2025</div>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <h3>Em Andamento</h3>
+                    <div class="task-card" draggable="true"
+                        data-title="Revisar documentação do Módulo RH"
+                        data-description="Verificar se todos os manuais do novo módulo de RH estão atualizados com as últimas regras da CLT."
+                        data-responsible="João"
+                        data-deadline="10/10/2025">
+                        <h4>Revisar documentação do Módulo RH</h4>
+                        <div class="task-footer">Responsável: João | Prazo: 10/10/2025</div>
+                    </div>
+                </div>
+                <div class="kanban-column">
+                    <h3>Concluída</h3>
+                    <div class="task-card" draggable="true"
+                        data-title="Ajustar layout da tela inicial"
+                        data-description="Implementar o feedback do chefe sobre o layout, movendo o mural de tarefas para a tela inicial. Esta tarefa está concluída."
+                        data-responsible="Carlos"
+                        data-deadline="06/10/2025">
+                        <h4>Ajustar layout da tela inicial</h4>
+                        <div class="task-footer">Responsável: Carlos | Concluído: 06/10/2025</div>
+                    </div>
+                    <div class="task-card" draggable="true"
+                        data-title="Implementar funcionalidade de logout"
+                        data-description="Adicionar o botão de logout e invalidar a sessão do usuário."
+                        data-responsible="Carlos"
+                        data-deadline="06/10/2025">
+                        <h4>Implementar funcionalidade de logout</h4>
+                        <div class="task-footer">Responsável: Carlos | Concluído: 06/10/2025</div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
-</body>
 
+    <div id="view-task-modal" class="modal-overlay">
+        <div class="content-panel modal-content" style="max-width: 800px;"> <div class="content-header">
+                <h2><i class="fas fa-clipboard-list"></i> Detalhes da Tarefa</h2>
+                <button class="btn-action close-modal-btn"><i class="fas fa-times fa-lg"></i></button>
+            </div>
+            
+            <div class="modal-view-content">
+                <h3 id="modal-task-title" style="color: #f8f9fa;">Título da Tarefa Aqui</h3>
+                <h4><i class="fas fa-info-circle"></i> Descrição</h4>
+                <p id="modal-task-description">Descrição completa da tarefa...</p>
+                <div class="task-meta">
+                    <strong>Responsável:</strong> <span id="modal-task-responsible"></span>
+                    <br>
+                    <strong>Prazo:</strong> <span id="modal-task-deadline"></span>
+                </div>
+
+                <div class="task-comment-thread">
+                    <h4><i class="fas fa-comments"></i> Atividade</h4>
+
+                    <div class="task-comment">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <strong>Ana (Criadora)</strong> comentou 2 dias atrás
+                            </div>
+                            <div class="comment-body">
+                                @Carlos, alguma atualização sobre isso?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-comment">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <strong>Carlos (Responsável)</strong> comentou 1 dia atrás
+                            </div>
+                            <div class="comment-body">
+                                Oi @Ana! Estou terminando a análise, devo subir o rascunho hoje à tarde.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-form">
+                        <i class="fas fa-user-circle"></i>
+                        <textarea class="form-control" rows="3" placeholder="Deixe um comentário..."></textarea>
+                    </div>
+
+                </div>
+                </div>
+
+            <div class="actions" style="justify-content: flex-end; margin-top: 20px;">
+                <button type="button" class="btn-primary" style="margin-right: auto;"><i class="fas fa-comment"></i> Comentar</button>
+                
+                <button type="button" class="btn-danger"><i class="fas fa-trash"></i> Excluir Tarefa</button>
+                <button type="button" class="btn-secondary close-modal-btn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>

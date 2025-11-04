@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
 </head>
-
 <body>
     <div class="container">
         <header class="top-nav">
@@ -17,25 +16,26 @@
             <nav class="sidebar-nav">
                 <a href="index.html" title="Dashboard"><i class="fas fa-home"></i></a>
                 <a href="comunicacao.html" title="Comunicação"><i class="fas fa-comment-dots"></i></a>
-                <a href="#" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+                <a href="chat.html" title="Chat"><i class="fas fa-comments"></i></a>
+                <a href="agenda.html" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
             </nav>
         </header>
         <div class="top-nav-second">
             <div class="breadcrumbs">
-                <a href="index.html"><i class="fas fa-home icon-sm"></i> Início</a> / <a
-                    href="comunicacao.html">Comunicação</a> / Despachados
+                <a href="index.html"><i class="fas fa-home icon-sm"></i> Início</a> / 
+                <a href="comunicacao.html">Comunicação</a> / Despachados
             </div>
             <div class="user-info">
-                <i class="fas fa-user-circle"></i><span>Nome da pessoa</span>
+                <i class="fas fa-user-circle"></i>
+                <span>Nome da pessoa</span>
             </div>
         </div>
         <main class="main-content">
-
             <nav class="sub-nav">
                 <a href="comunicacao.html">Memorandos</a>
-                <a href="mural_tarefas.html">Mural de Tarefas</a>
+                <a href="mural_tarefas.html">Criar Tarefa</a>
+                <a href="agenda.html">Agenda</a>
             </nav>
-
             <div class="content-header">
                 <h2>Memorandos Despachados</h2>
                 <div class="actions">
@@ -43,15 +43,15 @@
                     <a href="novo_memorando.html" class="btn-primary"><i class="fas fa-plus"></i> Novo Memorando</a>
                 </div>
             </div>
-
-            <table class="data-table">
+            
+            <table class="memo-table">
                 <thead>
                     <tr>
-                        <th>Código</th>
-                        <th>Título</th>
-                        <th>Origem</th>
-                        <th>Data/Hora</th>
-                        <th>Ações</th>
+                        <th>CÓDIGO</th>
+                        <th>TÍTULO</th>
+                        <th>ORIGEM</th>
+                        <th>DATA/HORA</th>
+                        <th>AÇÕES</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,16 +61,17 @@
                         <td>Nome da Pessoa</td>
                         <td>06/10/2025 16:45</td>
                         <td>
-                            <a href="visualizar_memorando_rh.html" class="btn-action" title="Visualizar"><i
-                                    class="fas fa-eye"></i></a>
-                            <a href="#" class="btn-action" title="Imprimir"><i class="fas fa-print"></i></a>
+                            <a href="visualizar_memorando_rh.html" class="btn-action" title="Visualizar">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="#" class="btn-action" title="Imprimir">
+                                <i class="fas fa-print"></i>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </main>
     </div>
-    <script src="js/script.js"></script>
 </body>
-
 </html>

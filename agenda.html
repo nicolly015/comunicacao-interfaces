@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - WeGIA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="top-nav">
+            <div class="logo"><i class="fas fa-bars menu-toggle"></i>W</div>
+            <nav class="sidebar-nav">
+                <a href="index.html" title="Dashboard"><i class="fas fa-home"></i></a>
+                <a href="comunicacao.html" title="Comunicação"><i class="fas fa-comment-dots"></i></a>
+                <a href="chat.html" title="Chat"><i class="fas fa-comments"></i></a>
+                <a href="agenda.html" title="Agenda"><i class="fas fa-calendar-alt"></i></a>
+            </nav>
+        </header>
+        <div class="top-nav-second">
+            <div class="breadcrumbs">
+                <a href="index.html"><i class="fas fa-home icon-sm"></i> Início</a> / 
+                <a href="comunicacao.html">Comunicação</a> / 
+                <span>Agenda</span>
+            </div>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Carlos</span>
+            </div>
+        </div>
+
+        <main class="main-content">
+            
+            <nav class="sub-nav">
+                <a href="comunicacao.html">Memorandos</a>
+                <a href="mural_tarefas.html">Criar Tarefa</a>
+                <a href="agenda.html" class="active">Agenda</a> </nav>
+
+            <div class="content-header">
+                <h2>Agenda (Outubro 2025)</h2>
+                <div class="actions">
+                    <button id="btn-cal-all" class="btn-secondary active">Todos</button>
+                    <button id="btn-cal-public" class="btn-secondary">Agenda Pública</button>
+                    <button id="btn-cal-private" class="btn-secondary">Minha Agenda</button>
+                    <button id="open-new-event-modal" class="btn-primary"><i class="fas fa-plus"></i> Novo Evento</button>
+                </div>
+            </div>
+
+            <div class="calendar-grid">
+                <div class="calendar-header">SEG</div>
+                <div class="calendar-header">TER</div>
+                <div class="calendar-header">QUA</div>
+                <div class="calendar-header">QUI</div>
+                <div class="calendar-header">SEX</div>
+                <div class="calendar-header">SÁB</div>
+                <div class="calendar-header">DOM</div>
+
+                <div class="calendar-day other-month"><span class="day-number">29</span></div>
+                <div class="calendar-day other-month"><span class="day-number">30</span></div>
+                <div class="calendar-day"><span class="day-number">1</span></div>
+                <div class="calendar-day"><span class="day-number">2</span></div>
+                <div class="calendar-day"><span class="day-number">3</span></div>
+                <div class="calendar-day"><span class="day-number">4</span></div>
+                <div class="calendar-day"><span class="day-number">5</span></div>
+
+                <div class="calendar-day"><span class="day-number">6</span>
+                    <div class="calendar-events">
+                        <div class="calendar-event event-private">Dentista (14:00)</div>
+                    </div>
+                </div>
+                <div class="calendar-day"><span class="day-number">7</span></div>
+                <div class="calendar-day"><span class="day-number">8</span></div>
+                <div class="calendar-day"><span class="day-number">9</span></div>
+                <div class="calendar-day"><span class="day-number">10</span>
+                    <div class="calendar-events">
+                        <div class="calendar-event event-public">Atualização WeGIA</div>
+                    </div>
+                </div>
+                <div class="calendar-day"><span class="day-number">11</span></div>
+                <div class="calendar-day"><span class="day-number">12</span></div>
+                
+                <div class="calendar-day"><span class="day-number">13</span></div>
+                <div class="calendar-day"><span class="day-number">14</span></div>
+                <div class="calendar-day"><span class="day-number">15</span>
+                    <div class="calendar-events">
+                        <div class="calendar-event event-public">Reunião Geral</div>
+                        <div class="calendar-event event-private">Entregar Relatório</div>
+                    </div>
+                </div>
+                <div class="calendar-day"><span class="day-number">16</span></div>
+                <div class="calendar-day"><span class="day-number">17</span></div>
+                <div class="calendar-day"><span class="day-number">18</span></div>
+                <div class="calendar-day"><span class="day-number">19</span></div>
+
+                <div class="calendar-day"><span class="day-number">20</span></div>
+                <div class="calendar-day"><span class="day-number">21</span></div>
+                <div class="calendar-day"><span class="day-number">22</span></div>
+                <div class="calendar-day"><span class="day-number">23</span></div>
+                <div class="calendar-day"><span class="day-number">24</span></div>
+                <div class="calendar-day"><span class="day-number">25</span></div>
+                <div class="calendar-day"><span class="day-number">26</span></div>
+                
+                <div class="calendar-day"><span class="day-number">27</span></div>
+                <div class="calendar-day"><span class="day-number">28</span></div>
+                <div class="calendar-day"><span class="day-number">29</span></div>
+                <div class="calendar-day"><span class="day-number">30</span></div>
+                <div class="calendar-day"><span class="day-number">31</span></div>
+                <div class="calendar-day other-month"><span class="day-number">1</span></div>
+                <div class="calendar-day other-month"><span class="day-number">2</span></div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="new-event-modal" class="modal-overlay">
+        <div class="content-panel modal-content">
+            <div class="content-header">
+                <h2><i class="fas fa-plus-circle"></i> Criar Novo Evento</h2>
+                <button class="btn-action close-modal-btn"><i class="fas fa-times fa-lg"></i></button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="event-title">Título do Evento</label>
+                    <input type="text" id="event-title" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-date">Data</label>
+                    <input type="date" id="event-date" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-type">Tipo de Evento</label>
+                    <select id="event-type" class="form-control" required>
+                        <option value="private">Minha Agenda (Privado)</option>
+                        <option value="public">Agenda Pública (Empresa)</option>
+                    </select>
+                </div>
+                
+                <div class="actions" style="justify-content: flex-end; margin-top: 20px;">
+                    <button type="button" class="btn-secondary close-modal-btn">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar Evento</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
